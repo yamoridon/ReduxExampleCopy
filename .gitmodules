@@ -1,0 +1,3 @@
+[submodule "iOS_architecture_samplecode"]
+	path = iOS_architecture_samplecode
+	url = https://github.com/peaks-cc/iOS_architecture_samplecode.git
