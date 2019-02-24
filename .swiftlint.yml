@@ -11,6 +11,7 @@ excluded:
 - GitHubAPIAll
 - vendor
 - openapi-patch-swift
+- iOS_architecture_samplecode/
 
 line_length: 160
 cyclomatic_complexity:
