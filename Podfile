@@ -7,8 +7,10 @@ target 'API' do
 
   # Pods for API
   pod 'Alamofire'
-  pod 'HTTPStatusCodes'
   pod 'GitHubAPI', :path => './iOS_architecture_samplecode/15/GitHubAPI', :version => '0.0.1'
+  pod 'HTTPStatusCodes'
+  pod 'RxSwift'
+  pod 'SwiftyBeaver'
 
   target 'APITests' do
     inherit! :search_paths

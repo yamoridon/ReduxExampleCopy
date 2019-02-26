@@ -206,3 +206,76 @@ extension APIDomainError {
         }
     }
 }
+
+extension APIDomainError {
+    internal static var unknownError: APIDomainError {
+        return APIDomainError.unknown(error: UnknownError())
+    }
+    internal static func unknownError(error: Error) -> APIDomainError {
+        return APIDomainError.unknown(error: UnknownError(error))
+    }
+    internal static func responseError(statusCode: Int) -> APIDomainError {
+        return APIDomainError.response(error: ResponseError(statusCode: statusCode, data: nil, error: UnknownError()))
+    }
+    internal static var networkError: APIDomainError {
+        return APIDomainError.network(error: NetworkError(message: "Could not connect to the server"))
+    }
+    internal static func serverError() -> APIDomainError {
+        return responseError(statusCode: HTTPStatusCode.internalServerError.rawValue)
+    }
+}
+
+extension GitHubAPI.ErrorResponse {
+    public var responseError: ResponseError? {
+        if case .error(let statusCode, let data, let error) = self {
+            return ResponseError(statusCode: statusCode, data: data, error: error)
+        } else {
+            return nil
+        }
+    }
+}
+
+private func createMessage(message: String, code: Int) -> String {
+    #if DEBUG
+    return "\(message) (\(code))"
+    #else
+    return message
+    #endif
+}
+
+extension NetworkError: CustomStringConvertible {
+    public var description: String {
+        return createMessage(message: message, code: code)
+    }
+}
+
+extension UnknownError: CustomStringConvertible {
+    public var description: String {
+        return createMessage(message: "System error has occurred.", code: -1)
+    }
+}
+
+extension ResponseError: CustomStringConvertible {
+    public var description: String {
+        if statusCode == HTTPStatusCode.internalServerError.rawValue {
+            return createMessage(message: "Internal server error has occurred.", code: statusCode)
+        } else if statusCode == HTTPStatusCode.unauthorized.rawValue {
+            return createMessage(message: "Unauthenticated", code: statusCode)
+        } else if statusCode == HTTPStatusCode.notFound.rawValue {
+            return createMessage(message: "NotFound", code: statusCode)
+        } else if statusCode == HTTPStatusCode.serviceUnavailable.rawValue {
+            return createMessage(message: "UnderMaintenance", code: statusCode)
+        } else if statusCode == HTTPStatusCode.gatewayTimeout.rawValue {
+            return createMessage(message: "GetwayTimeout", code: statusCode)
+        } else if let afError = error as? Alamofire.AFError {
+            switch afError {
+            case Alamofire.AFError.responseValidationFailed:
+                return createMessage(message: "System error has occurred.", code: 991001)
+            default:
+                return createMessage(message: "System error has occurred.", code: 991002)
+            }
+        } else {
+            return createMessage(message: "System error has occurred.", code: 991003)
+        }
+    }
+}

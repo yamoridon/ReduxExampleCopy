@@ -21,6 +21,7 @@
 		66BDAEDA22230DF7008E6EBE /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BDAEC522230DF7008E6EBE /* API.framework */; };
 		66BDAEDB22230DF7008E6EBE /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 66BDAEC522230DF7008E6EBE /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66BDAEE522230E95008E6EBE /* APIDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BDAEE422230E95008E6EBE /* APIDomainError.swift */; };
+		66BDAEE72224638F008E6EBE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BDAEE62224638F008E6EBE /* API.swift */; };
 		6E9F19D14306E70CA76758B1 /* Pods_ReduxExampleCopyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E667829C415A7ADC96CD9A6C /* Pods_ReduxExampleCopyTests.framework */; };
 		938C221A827F846A292075E3 /* Pods_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28C067920A863E0237A0937F /* Pods_API.framework */; };
 		C2AA8A93DC9B96F9BF3F7479 /* Pods_ReduxExampleCopy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6638F81C06BDD1B0DB84F3BF /* Pods_ReduxExampleCopy.framework */; };
@@ -105,6 +106,7 @@
 		66BDAED422230DF7008E6EBE /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		66BDAED622230DF7008E6EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66BDAEE422230E95008E6EBE /* APIDomainError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIDomainError.swift; sourceTree = "<group>"; };
+		66BDAEE62224638F008E6EBE /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8467099362F5C26C9EBA0695 /* Pods-ReduxExampleCopy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleCopy.debug.xcconfig"; path = "Target Support Files/Pods-ReduxExampleCopy/Pods-ReduxExampleCopy.debug.xcconfig"; sourceTree = "<group>"; };
 		9EC4B4A5A1B0A9D540E4EF51 /* Pods-ReduxExampleCopyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleCopyTests.debug.xcconfig"; path = "Target Support Files/Pods-ReduxExampleCopyTests/Pods-ReduxExampleCopyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B696D21661ABB14C87D43D87 /* Pods-ReduxExampleCopy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReduxExampleCopy.release.xcconfig"; path = "Target Support Files/Pods-ReduxExampleCopy/Pods-ReduxExampleCopy.release.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		66BDAEC622230DF7008E6EBE /* API */ = {
 			isa = PBXGroup;
 			children = (
+				66BDAEE62224638F008E6EBE /* API.swift */,
 				66BDAEE422230E95008E6EBE /* APIDomainError.swift */,
 				66BDAEC722230DF7008E6EBE /* API.h */,
 				66BDAEC822230DF7008E6EBE /* Info.plist */,
@@ -595,6 +598,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GitHubAPI/GitHubAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -603,6 +609,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GitHubAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -663,6 +672,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66BDAEE72224638F008E6EBE /* API.swift in Sources */,
 				66BDAEE522230E95008E6EBE /* APIDomainError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
