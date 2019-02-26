@@ -3,6 +3,8 @@ PODS:
   - GitHubAPI (0.0.1):
     - Alamofire (~> 4.5.0)
   - HTTPStatusCodes (3.2.0)
+  - KeychainAccess (3.1.2)
+  - ReSwift (4.0.1)
   - RxAtomic (4.4.1)
   - RxSwift (4.4.1):
     - RxAtomic (~> 4.4)
@@ -13,6 +15,8 @@ DEPENDENCIES:
   - Alamofire
   - GitHubAPI (from `./iOS_architecture_samplecode/15/GitHubAPI`)
   - HTTPStatusCodes
+  - KeychainAccess
+  - ReSwift
   - RxSwift
   - SwiftLint
   - SwiftyBeaver
@@ -21,6 +25,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - HTTPStatusCodes
+    - KeychainAccess
+    - ReSwift
     - RxAtomic
     - RxSwift
     - SwiftLint
@@ -35,11 +41,13 @@ SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   GitHubAPI: 740d68cacf80f117cbf09e2d55ccc1b42d3d26e2
   HTTPStatusCodes: 69f50d229c4b5d6dcb48fad9c86e32ded975bcd3
+  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
+  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
   RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
   SwiftyBeaver: 8e67ab3cd94389cbbb7a9c7cc02748d98bfee68e
 
-PODFILE CHECKSUM: 3c2ff386b4e704ff88e0193c0d726fb24065e118
+PODFILE CHECKSUM: b4970a0662c1ddbeb70a2143335823f03210a296
 
 COCOAPODS: 1.6.1

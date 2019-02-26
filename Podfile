@@ -8,7 +8,9 @@ target 'API' do
   # Pods for API
   pod 'Alamofire'
   pod 'GitHubAPI', :path => './iOS_architecture_samplecode/15/GitHubAPI', :version => '0.0.1'
+  pod 'KeychainAccess'
   pod 'HTTPStatusCodes'
+  pod 'ReSwift'
   pod 'RxSwift'
   pod 'SwiftyBeaver'
 

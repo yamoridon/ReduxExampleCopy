@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B7BB695EC556B89AC21DF3D /* Pods_APITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7458EE4922728213240005B /* Pods_APITests.framework */; };
+		66639DCD222514E200B59CDC /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66639DCC222514E200B59CDC /* KeychainStore.swift */; };
 		66BDAE8F22230A16008E6EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BDAE8E22230A16008E6EBE /* AppDelegate.swift */; };
 		66BDAE9122230A16008E6EBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BDAE9022230A16008E6EBE /* ViewController.swift */; };
 		66BDAE9422230A16008E6EBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66BDAE9222230A16008E6EBE /* Main.storyboard */; };
@@ -86,6 +87,7 @@
 		28C067920A863E0237A0937F /* Pods_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3939476B9DD55F3BBED81CFB /* Pods-API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-API.debug.xcconfig"; path = "Target Support Files/Pods-API/Pods-API.debug.xcconfig"; sourceTree = "<group>"; };
 		6638F81C06BDD1B0DB84F3BF /* Pods_ReduxExampleCopy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReduxExampleCopy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66639DCC222514E200B59CDC /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		66BDAE8B22230A16008E6EBE /* ReduxExampleCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxExampleCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66BDAE8E22230A16008E6EBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66BDAE9022230A16008E6EBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,9 +167,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66639DCA222513CA00B59CDC /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				66639DCB222514D200B59CDC /* Common */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		66639DCB222514D200B59CDC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				66639DCC222514E200B59CDC /* KeychainStore.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		66BDAE8222230A16008E6EBE = {
 			isa = PBXGroup;
 			children = (
+				66639DCA222513CA00B59CDC /* Redux */,
 				66BDAE8D22230A16008E6EBE /* ReduxExampleCopy */,
 				66BDAEA222230A18008E6EBE /* ReduxExampleCopyTests */,
 				66BDAEAD22230A18008E6EBE /* ReduxExampleCopyUITests */,
@@ -598,6 +617,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GitHubAPI/GitHubAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
@@ -609,6 +630,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GitHubAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
@@ -648,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66BDAE9122230A16008E6EBE /* ViewController.swift in Sources */,
+				66639DCD222514E200B59CDC /* KeychainStore.swift in Sources */,
 				66BDAE8F22230A16008E6EBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
